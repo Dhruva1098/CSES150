@@ -22,6 +22,18 @@ bool e(int i, int j) {
     return i >= 0 && i < n && j >= 0 && j < m && s[i][j] != '#';
 }
 
+void bfs(vector<ar<int, 2>>& v1, int d[mxN][mxN], int p[mxN][mxN]) {
+    queue<ar<int, 2>> qu;
+    qu.push({si,sj});
+    while(qu.size(){
+        ar<int, 2> u = qu.front();
+        qu.pop();
+        for(int k = 0; k < 4; k++){
+            int ni = u[0] + 
+        }
+    }
+}
+
 int main(){
     cin >> n >> m;
     vector<ar<int, 2>> v2;
@@ -36,12 +48,8 @@ int main(){
                 s[i][j] = '.';
             }
         }
-        p[i] = string(m, '.');
     }
-    queue<ar<int, 2>> qu;
-    qu.push({si, sj});
-    while(qu,size()){
-
-    }
-    
+    bfs({si, sj}, d1, p1);
+    bfs(v2, d2, p2);
+     
 }

@@ -22,7 +22,7 @@ void dfs(int u, int pu = -1) {
     p[u] = pu;
     vis[u] = true;
     for(int v : adj[u]) {
-        if(v == pu) continue; // Avoid going back to parent
+        if(v == pu) continue; 
         if(vis[v]){
             int u2 = u;
             while(u^v){
