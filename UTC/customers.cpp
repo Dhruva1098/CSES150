@@ -19,22 +19,19 @@ using namespace std;
 #define ll long long
 #define ar array
 
-
 int n;
-
 int main(){
 	cin >> n;
-	map<pair<int,int>, string> mp;
+	set<ar<int,2>> s;
 	for(int i = 0; i < n; i++){
-		int c1,c2; string s;
-		cin >> c1 >> c2 >> s;
-		mp[{c1,c2}] = s;
-	} 
-	int k;
-	cin >> k;
-	for(int i = 0; i < k; i++){
-		int p1, p2; cin >> p1 >> p2;
-		cout << "\n" << mp[{p1,p2}];
+		int a,b; cin >> a >> b;
+		s.insert({2*a, 1});
+		s.insert({2*b+1, -1});
 	}
-
+	int c=0, ans = 0;
+	for(ar<int,2> p : s){
+		c += p[1];
+		ans = max(ans, c);
+	}
+	cout << ans;
 }

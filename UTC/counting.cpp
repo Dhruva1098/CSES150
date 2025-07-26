@@ -22,5 +22,4 @@ int main(){
 		if(pos[i] > pos[i+1]) cnt++;
 	}
 	cout << cnt;
-
 }
