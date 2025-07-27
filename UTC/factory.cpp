@@ -16,18 +16,18 @@ int a[mxn];
 
 int main(){
 	cin >> n >> t;
-	ll large = 1e18;
-	ll small = 1;
 	for(int i = 0; i < n; i++){
 		cin >> a[i];
 	}
-	while(small < large){
-		ll mid = small + (large - small)/2, s=0;
+	ll lb = 0, rb = 1e18;
+	while(lb<rb){
+		ll s = 0,mb = lb + (rb - lb)/2;
 		for(int i = 0; i < n; i++){
-			s+= min(mid/a[i], (ll)1e9);
+			s += min(mb/a[i], (ll)1e9);
 		}
-		if(s>t) large = mid;
-		else small = mid+1;
+		if(s>=t) rb = mb;
+		else lb = mb+1;
 	}
-	cout << large;
+	cout << lb;
+
 }
